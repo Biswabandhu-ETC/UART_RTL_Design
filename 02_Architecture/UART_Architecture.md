@@ -39,14 +39,14 @@ This document describes the architecture of the UART RTL Design project. It expl
 
 ```mermaid
 flowchart LR
-    CPUA["CPU A"]
-    TX["UART Transmitter"]
-    RX["UART Receiver"]
-    CPUB["CPU B"]
+    CPUA[CPU A]
+    TX[UART TX]
+    RX[UART RX]
+    CPUB[CPU B]
 
-    CPUA -->|Write Data| TX
-    TX -->|TXD (Serial Line)| RX
-    RX -->|Read Data| CPUB
+    CPUA -->|Parallel Data| TX
+    TX -->|Serial TXD| RX
+    RX -->|Parallel Data| CPUB
 ```
 
 
