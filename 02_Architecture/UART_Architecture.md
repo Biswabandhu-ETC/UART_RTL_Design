@@ -102,13 +102,11 @@ The first version of the UART implements the **8N1 communication format**.
 
 ### Frame Representation
 
-```text
-+------+-------+-----------------------------------+------+
-| Idle | Start |     D0 D1 D2 D3 D4 D5 D6 D7       | Stop |
-+------+-------+-----------------------------------+------+
-|  1   |   0   |        LSB ------------> MSB      |  1   |
-+------+-------+-----------------------------------+------+
-```
+## UART Frame Format
+
+| Idle | Start | Data Bit 0 | Data Bit 1 | Data Bit 2 | Data Bit 3 | Data Bit 4 | Data Bit 5 | Data Bit 6 | Data Bit 7 | Stop |
+|------|-------|------------|------------|------------|------------|------------|------------|------------|------------|------|
+| High | Low   | D0         | D1         | D2         | D3         | D4         | D5         | D6         | D7         | High |
 
 ---
 
